@@ -31,6 +31,7 @@ const ProjectBoardFilters = ({ projectUsers, defaultFilters, filters, mergeFilte
         value={searchTerm}
         onChange={value => mergeFilters({ searchTerm: value })}
       />
+
       <Avatars>
         {projectUsers.map(user => (
           <AvatarIsActiveBorder key={user.id} isActive={userIds.includes(user.id)}>
@@ -42,6 +43,7 @@ const ProjectBoardFilters = ({ projectUsers, defaultFilters, filters, mergeFilte
           </AvatarIsActiveBorder>
         ))}
       </Avatars>
+
       <StyledButton
         variant="empty"
         isActive={myOnly}
@@ -56,8 +58,9 @@ const ProjectBoardFilters = ({ projectUsers, defaultFilters, filters, mergeFilte
       >
         Recently Updated
       </StyledButton>
+
       {!areFiltersCleared && (
-        <ClearAll onClick={() => mergeFilters(defaultFilters)}>Clear all</ClearAll>
+        <ClearAll onClick={() => mergeFilters(defaultFilters)}>Clear Filters</ClearAll>
       )}
     </Filters>
   );

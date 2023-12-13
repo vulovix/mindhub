@@ -8,14 +8,17 @@ export const List = styled.div`
   margin: 0 5px;
   min-height: 400px;
   width: 25%;
-  border-radius: 3px;
+  // border-radius: 3px;
   background: ${color.backgroundLightest};
 `;
 
 export const Title = styled.div`
-  padding: 13px 10px 17px;
+  padding: 13px 10px 13px;
   text-transform: uppercase;
   color: ${color.textMedium};
+  ${font.medium};
+  margin-bottom: 5px;
+  background-color: ${color.backgroundLight};
   ${font.size(12.5)};
   ${mixin.truncateText}
 `;

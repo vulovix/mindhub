@@ -11,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name]-[hash].js',
     publicPath: '/',
+    hashFunction: 'xxhash64',
   },
   module: {
     rules: [
@@ -64,6 +65,6 @@ module.exports = {
         API_URL: JSON.stringify('https://jira-api.ivorreic.com'),
       },
     }),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
   ],
 };

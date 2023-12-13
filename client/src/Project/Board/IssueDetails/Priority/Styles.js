@@ -9,7 +9,7 @@ export const Priority = styled.div`
     props.isValue &&
     css`
       padding: 3px 4px 3px 0px;
-      border-radius: 4px;
+      // border-radius: 4px;
       &:hover,
       &:focus {
         background: ${color.backgroundLight};

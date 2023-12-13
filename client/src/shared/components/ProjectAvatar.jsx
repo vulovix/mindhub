@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import logo from 'logo128x128.png';
 
 const propTypes = {
   className: PropTypes.string,
@@ -13,6 +14,7 @@ const defaultProps = {
 
 const ProjectAvatar = ({ className, size }) => (
   <span className={className}>
+    {/* <img src={logo} width={size} height={size} alt="Project avatar" /> */}
     <svg
       width={size}
       height={size}

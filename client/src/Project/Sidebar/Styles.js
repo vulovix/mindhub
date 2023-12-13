@@ -11,7 +11,7 @@ export const Sidebar = styled.div`
   width: ${sizes.secondarySideBarWidth}px;
   padding: 0 16px 24px;
   background: ${color.backgroundLightest};
-  border-right: 1px solid ${color.borderLightest};
+  // border-right: 1px solid ${color.borderLightest};
   ${mixin.scrollableY}
   ${mixin.customScrollbar()}
   @media (max-width: 1100px) {
@@ -28,7 +28,10 @@ export const ProjectInfo = styled.div`
 `;
 
 export const ProjectTexts = styled.div`
-  padding: 3px 0 0 10px;
+  padding: 0px 0 0 10px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
 `;
 
 export const ProjectName = styled.div`
@@ -40,6 +43,7 @@ export const ProjectName = styled.div`
 export const ProjectCategory = styled.div`
   color: ${color.textMedium};
   ${font.size(13)};
+  margin-top: 0.4rem;
 `;
 
 export const Divider = styled.div`
@@ -52,7 +56,7 @@ export const LinkItem = styled.div`
   position: relative;
   display: flex;
   padding: 8px 12px;
-  border-radius: 3px;
+  // border-radius: 3px;
   ${mixin.clickable}
   ${props =>
     !props.to ? `cursor: not-allowed;` : `&:hover { background: ${color.backgroundLight}; }`}
@@ -81,7 +85,7 @@ export const NotImplemented = styled.div`
   left: 40px;
   width: 140px;
   padding: 5px 0 5px 8px;
-  border-radius: 3px;
+  // border-radius: 3px;
   text-transform: uppercase;
   color: ${color.textDark};
   background: ${color.backgroundMedium};

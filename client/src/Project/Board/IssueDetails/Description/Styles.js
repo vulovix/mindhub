@@ -11,7 +11,7 @@ export const Title = styled.div`
 export const EmptyLabel = styled.div`
   margin-left: -7px;
   padding: 7px;
-  border-radius: 3px;
+  // border-radius: 3px;
   color: ${color.textMedium}
   transition: background 0.1s;
   ${font.size(15)}

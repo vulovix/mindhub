@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 
 import { ProjectCategoryCopy } from 'shared/constants/projects';
-import { Icon, ProjectAvatar } from 'shared/components';
+import { Icon /* , ProjectAvatar */ } from 'shared/components';
 
 import {
   Sidebar,
@@ -11,7 +11,7 @@ import {
   ProjectTexts,
   ProjectName,
   ProjectCategory,
-  Divider,
+  // Divider,
   LinkItem,
   LinkText,
   NotImplemented,
@@ -27,21 +27,23 @@ const ProjectSidebar = ({ project }) => {
   return (
     <Sidebar>
       <ProjectInfo>
-        <ProjectAvatar />
+        {/* <ProjectAvatar /> */}
         <ProjectTexts>
           <ProjectName>{project.name}</ProjectName>
-          <ProjectCategory>{ProjectCategoryCopy[project.category]} project</ProjectCategory>
+          <ProjectCategory>{ProjectCategoryCopy[project.category]} Project</ProjectCategory>
         </ProjectTexts>
       </ProjectInfo>
 
-      {renderLinkItem(match, 'Kanban Board', 'board', '/board')}
-      {renderLinkItem(match, 'Project settings', 'settings', '/settings')}
+      {renderLinkItem(match, 'Board', 'board', '/board')}
+      {renderLinkItem(match, 'Project Settings', 'settings', '/settings')}
+      {/* 
       <Divider />
       {renderLinkItem(match, 'Releases', 'shipping')}
       {renderLinkItem(match, 'Issues and filters', 'issues')}
       {renderLinkItem(match, 'Pages', 'page')}
       {renderLinkItem(match, 'Reports', 'reports')}
-      {renderLinkItem(match, 'Components', 'component')}
+      {renderLinkItem(match, 'Components', 'component')} 
+      */}
     </Sidebar>
   );
 };

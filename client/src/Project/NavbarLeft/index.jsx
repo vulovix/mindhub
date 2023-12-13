@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Icon, AboutTooltip } from 'shared/components';
+import { Icon /* , AboutTooltip */ } from 'shared/components';
 
 import { NavLeft, LogoLink, StyledLogo, Bottom, Item, ItemText } from './Styles';
 
@@ -14,10 +14,11 @@ const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen }) => (
   <NavLeft>
     <LogoLink to="/">
       <StyledLogo color="#fff" />
+      <ItemText>Workspace</ItemText>
     </LogoLink>
 
     <Item onClick={issueSearchModalOpen}>
-      <Icon type="search" size={22} top={1} left={3} />
+      <Icon type="search" size={22} left={3} />
       <ItemText>Search issues</ItemText>
     </Item>
 
@@ -27,7 +28,7 @@ const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen }) => (
     </Item>
 
     <Bottom>
-      <AboutTooltip
+      {/* <AboutTooltip
         placement="right"
         offset={{ top: -218 }}
         renderLink={linkProps => (
@@ -36,7 +37,7 @@ const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen }) => (
             <ItemText>About</ItemText>
           </Item>
         )}
-      />
+      /> */}
     </Bottom>
   </NavLeft>
 );

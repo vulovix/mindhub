@@ -30,7 +30,7 @@ const ProjectBoardList = ({ status, project, filters, currentUserId }) => {
       {provided => (
         <List>
           <Title>
-            {`${IssueStatusCopy[status]} `}
+            {`${IssueStatusCopy[status]} `}&middot;&nbsp;
             <IssuesCount>{formatIssuesCount(allListIssues, filteredListIssues)}</IssuesCount>
           </Title>
           <Issues

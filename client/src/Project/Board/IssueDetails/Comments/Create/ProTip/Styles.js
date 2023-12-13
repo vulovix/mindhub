@@ -19,7 +19,7 @@ export const TipLetter = styled.span`
   display: inline-block;
   margin: 0 4px;
   padding: 0 4px;
-  border-radius: 2px;
+  // border-radius: 2px;
   color: ${color.textDarkest};
   background: ${color.backgroundMedium};
   ${font.bold}

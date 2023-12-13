@@ -4,7 +4,7 @@ import { color, font, mixin } from 'shared/utils/styles';
 
 export const TrackingLink = styled.div`
   padding: 4px 4px 2px 0;
-  border-radius: 4px;
+  // border-radius: 4px;
   transition: background 0.1s;
   ${mixin.clickable}
   &:hover {

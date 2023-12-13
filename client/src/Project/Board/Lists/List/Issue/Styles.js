@@ -11,9 +11,9 @@ export const IssueLink = styled(Link)`
 
 export const Issue = styled.div`
   padding: 10px;
-  border-radius: 3px;
+  // border-radius: 3px;
   background: #fff;
-  box-shadow: 0px 1px 2px 0px rgba(9, 30, 66, 0.25);
+  // box-shadow: 0px 1px 2px 0px rgba(9, 30, 66, 0.25);
   transition: background 0.1s;
   ${mixin.clickable}
   @media (max-width: 1100px) {

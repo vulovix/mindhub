@@ -1,16 +1,10 @@
-<h1 align="center">A simplified Jira clone built with React and Node</h1>
+<h1 align="center">Workspace</h1>
 
-<div align="center">Auto formatted with Prettier, tested with Cypress 🎗</div>
-
-<h3 align="center">
-  <a href="https://jira.ivorreic.com/">Visit the live app</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/client">View client</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/api">View API</a>
-</h3>
+<div align="center">React, Node, Auto formatted with Prettier, tested with Cypress 🎗</div>
 
 ![Tech logos](https://i.ibb.co/DVFj8PL/tech-icons.jpg)
 
-![App screenshot](https://i.ibb.co/W3qVvCn/jira-optimized.jpg)
+![App screenshot](https://res.cloudinary.com/komplexica/image/upload/txzcxcqq2nqycpvtl5le.png)
 
 ## What is this and who is it for 🤷‍♀️
 
@@ -31,7 +25,7 @@ There are many showcase/example React projects out there but most of them are wa
 ## Setting up development environment 🛠
 
 - Install [postgreSQL](https://www.postgresql.org/) if you don't have it already and create a database named `jira_development`.
-- `git clone https://github.com/oldboyxx/jira_clone.git`
+- `git clone https://github.com/vulovix/workspace.git`
 - Create an empty `.env` file in `/api`, copy `/api/.env.example` contents into it, and fill in your database username and password.
 - `npm run install-dependencies`
 - `cd api && npm start`
@@ -62,7 +56,7 @@ Not all components have properly defined [aria attributes](https://developer.moz
 
 ### Unit/Integration tests 🧪
 
-Both Client and API are currently tested through [end-to-end Cypress tests](https://github.com/oldboyxx/jira_clone/tree/master/client/cypress/integration). That's good enough for a relatively simple application such as this, even if it was a real product. However, as the app grows in complexity, it might be wise to start writing additional unit/integration tests.
+Both Client and API are currently tested through [end-to-end Cypress tests](https://github.com/vulovix/workspace/tree/master/client/cypress/integration). That's good enough for a relatively simple application such as this, even if it was a real product. However, as the app grows in complexity, it might be wise to start writing additional unit/integration tests.
 
 ## Contributing
 
@@ -72,10 +66,7 @@ I will not be accepting PR's on this repository. Feel free to fork and maintain 
 
 [MIT](https://opensource.org/licenses/MIT)
 
-<hr>
+## About
 
-<h3>
-  <a href="https://jira.ivorreic.com/">Visit the live app</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/client">View client</a> |
-  <a href="https://github.com/oldboyxx/jira_clone/tree/master/api">View API</a>
-</h3>
+This project if fork of https://github.com/oldboyxx/jira_clone project.
+What I did here is to update webpack to newest version, update typeorm, make everything work for newest NodeJS - and important - restyle whole app.

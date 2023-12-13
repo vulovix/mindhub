@@ -11,7 +11,7 @@ export const User = styled.div`
     css`
       margin: 0 10px ${props.withBottomMargin ? 5 : 0}px 0;
       padding: 4px 8px;
-      border-radius: 4px;
+      // border-radius: 4px;
       background: ${color.backgroundLight};
       transition: background 0.1s;
       &:hover {

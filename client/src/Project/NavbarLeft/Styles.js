@@ -19,14 +19,23 @@ export const NavLeft = styled.aside`
     width: 200px;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.6);
   }
+  img {
+    filter: invert(1);
+  }
 `;
 
 export const LogoLink = styled(NavLink)`
-  display: block;
+  display: flex;
   position: relative;
+  flex-direction: row;
+  align-items: center;
   left: 0;
   margin: 20px 0 10px;
   transition: left 0.1s;
+  & > div {
+    color: #fff;
+    margin-left: 10px;
+  }
 `;
 
 export const StyledLogo = styled(Logo)`

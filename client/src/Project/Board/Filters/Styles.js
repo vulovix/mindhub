@@ -10,8 +10,8 @@ export const Filters = styled.div`
 `;
 
 export const SearchInput = styled(InputDebounced)`
-  margin-right: 18px;
-  width: 160px;
+  margin-right: 24px;
+  width: calc(25% - 8px);
 `;
 
 export const Avatars = styled.div`
@@ -43,13 +43,13 @@ export const StyledButton = styled(Button)`
 export const ClearAll = styled.div`
   height: 32px;
   line-height: 32px;
-  margin-left: 15px;
+  margin-left: auto;
   padding-left: 12px;
-  border-left: 1px solid ${color.borderLightest};
+  // border-left: 1px solid ${color.borderLightest};
   color: ${color.textDark};
   ${font.size(14.5)}
   ${mixin.clickable}
   &:hover {
-    color: ${color.textMedium};
+    color: ${color.textDark};
   }
 `;

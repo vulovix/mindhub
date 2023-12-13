@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import logo from 'logo128x128.png';
 
 const propTypes = {
   className: PropTypes.string,
@@ -13,7 +14,8 @@ const defaultProps = {
 
 const Logo = ({ className, size }) => (
   <span className={className}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.76 75.76" width={size}>
+    <img src={logo} alt="Logo" width={size} />
+    {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.76 75.76" width={size}>
       <defs>
         <linearGradient
           id="linear-gradient"
@@ -52,7 +54,7 @@ const Logo = ({ className, size }) => (
           />
         </g>
       </g>
-    </svg>
+    </svg> */}
   </span>
 );
 

@@ -19,13 +19,13 @@ export const Right = styled.div`
 
 export const BarCont = styled.div`
   height: 5px;
-  border-radius: 4px;
+  // border-radius: 4px;
   background: ${color.backgroundMedium};
 `;
 
 export const Bar = styled.div`
   height: 5px;
-  border-radius: 4px;
+  // border-radius: 4px;
   background: ${color.primary};
   transition: all 0.1s;
   width: ${props => props.width}%;

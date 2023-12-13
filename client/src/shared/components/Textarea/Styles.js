@@ -9,7 +9,7 @@ export const StyledTextarea = styled.div`
     overflow-y: hidden;
     width: 100%;
     padding: 8px 12px 9px;
-    border-radius: 3px;
+    // border-radius: 3px;
     border: 1px solid ${color.borderLightest};
     color: ${color.textDarkest};
     background: ${color.backgroundLightest};

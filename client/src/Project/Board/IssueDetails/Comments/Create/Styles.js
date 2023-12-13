@@ -21,7 +21,7 @@ export const Right = styled.div`
 
 export const FakeTextarea = styled.div`
   padding: 12px 16px;
-  border-radius: 4px;
+  // border-radius: 4px;
   border: 1px solid ${color.borderLightest};
   color: ${color.textLight};
   ${mixin.clickable}

@@ -33,7 +33,7 @@ const ProjectBoardListIssue = ({ projectUsers, issue, index }) => {
             <Bottom>
               <div>
                 <IssueTypeIcon type={issue.type} />
-                <IssuePriorityIcon priority={issue.priority} top={-1} left={4} />
+                <IssuePriorityIcon priority={issue.priority} top={0} left={4} />
               </div>
               <Assignees>
                 {assignees.map(user => (

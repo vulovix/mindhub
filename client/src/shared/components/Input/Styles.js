@@ -14,7 +14,7 @@ export const InputElement = styled.input`
   height: 100%;
   width: 100%;
   padding: 0 7px;
-  border-radius: 3px;
+  // border-radius: 3px;
   border: 1px solid ${color.borderLightest};
   color: ${color.textDarkest};
   background: ${color.backgroundLightest};

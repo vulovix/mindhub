@@ -41,7 +41,7 @@ const modalStyles = {
   center: css`
     max-width: ${props => props.width}px;
     vertical-align: middle;
-    border-radius: 3px;
+    // border-radius: 3px;
     ${mixin.boxShadowMedium}
   `,
   aside: css`
@@ -65,7 +65,7 @@ const closeIconStyles = {
     top: 10px;
     right: 12px;
     padding: 3px 5px 0px 5px;
-    border-radius: 4px;
+    // border-radius: 4px;
     &:hover {
       background: ${color.backgroundLight};
     }
@@ -76,7 +76,7 @@ const closeIconStyles = {
     width: 50px;
     height: 50px;
     padding-top: 10px;
-    border-radius: 3px;
+    // border-radius: 3px;
     text-align: center;
     background: #fff;
     border: 1px solid ${color.borderLightest};

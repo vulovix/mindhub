@@ -48,7 +48,7 @@ export const Issue = styled.div`
   display: flex;
   align-items: center;
   padding: 4px 10px;
-  border-radius: 4px;
+  // border-radius: 4px;
   transition: background 0.1s;
   ${mixin.clickable}
   &:hover {

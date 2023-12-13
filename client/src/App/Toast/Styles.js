@@ -7,7 +7,7 @@ export const Container = styled.div`
   z-index: ${zIndexValues.modal + 1};
   position: fixed;
   right: 30px;
-  top: 50px;
+  bottom: 50px;
 `;
 
 export const StyledToast = styled.div`
@@ -15,7 +15,7 @@ export const StyledToast = styled.div`
   margin-bottom: 5px;
   width: 300px;
   padding: 15px 20px;
-  border-radius: 3px;
+  // border-radius: 3px;
   color: #fff;
   background: ${props => color[props.type]};
   cursor: pointer;

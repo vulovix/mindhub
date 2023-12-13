@@ -5,7 +5,7 @@ import Icon from 'shared/components/Icon';
 
 export const StyledSelect = styled.div`
   position: relative;
-  border-radius: 4px;
+  // border-radius: 4px;
   cursor: pointer;
   ${font.size(14)}
   ${props => props.variant === 'empty' && `display: inline-block;`}
@@ -94,7 +94,7 @@ export const Dropdown = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
-  border-radius: 0 0 4px 4px;
+  // border-radius: 0 0 4px 4px;
   background: #fff;
   ${mixin.boxShadowDropdown}
   ${props => (props.width ? `width: ${props.width}px;` : 'width: 100%;')}

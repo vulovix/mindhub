@@ -4,9 +4,10 @@ import Color from 'color';
 import { IssueType, IssueStatus, IssuePriority } from 'shared/constants/issues';
 
 export const color = {
-  primary: '#0052cc', // Blue
-  success: '#0B875B', // green
+  primary: '#161618', // Black ; #0052cc Blue
+  success: '#5abc5e', // Green;'#0B875B', // green
   danger: '#E13C3C', // red
+  info: '#03A9F4', // blue
   warning: '#F89C1C', // orange
   secondary: '#F4F5F7', // light grey
 
@@ -16,43 +17,43 @@ export const color = {
   textLight: '#8993a4',
   textLink: '#0052cc',
 
-  backgroundDarkPrimary: '#0747A6',
+  backgroundDarkPrimary: '#161618',
   backgroundMedium: '#dfe1e6',
   backgroundLight: '#ebecf0',
   backgroundLightest: '#F4F5F7',
-  backgroundLightPrimary: '#D2E5FE',
-  backgroundLightSuccess: '#E4FCEF',
+  backgroundLightPrimary: '#03a9f433',
+  backgroundLightSuccess: '#5abc5e40',
 
-  borderLightest: '#dfe1e6',
+  borderLightest: 'transparent', // '#dfe1e6',
   borderLight: '#C1C7D0',
-  borderInputFocus: '#4c9aff',
+  borderInputFocus: '#161618',
 };
 
 export const issueTypeColors = {
-  [IssueType.TASK]: '#4FADE6', // blue
-  [IssueType.BUG]: '#E44D42', // red
-  [IssueType.STORY]: '#65BA43', // green
+  [IssueType.TASK]: '#607D8B', // Gray; '#4FADE6', // blue
+  [IssueType.BUG]: '#607d8b', // Gray; '#E44D42', // red
+  [IssueType.STORY]: '#607d8b', // Gray; '#65BA43', // green
 };
 
 export const issuePriorityColors = {
-  [IssuePriority.HIGHEST]: '#CD1317', // red
-  [IssuePriority.HIGH]: '#E9494A', // orange
-  [IssuePriority.MEDIUM]: '#E97F33', // orange
-  [IssuePriority.LOW]: '#2D8738', // green
-  [IssuePriority.LOWEST]: '#57A55A', // green
+  [IssuePriority.HIGHEST]: '#E91E63', // Pink; '#CD1317', // red
+  [IssuePriority.HIGH]: '#ff5722', // Orange; '#E9494A', // orange
+  [IssuePriority.MEDIUM]: '#ffc107', // Organge; '#E97F33', // orange
+  [IssuePriority.LOW]: '#2196f3', // Turqoise; '#2D8738', // green
+  [IssuePriority.LOWEST]: '#00bcd4', // Turquoise '#57A55A', // green
 };
 
 export const issueStatusColors = {
   [IssueStatus.BACKLOG]: color.textDark,
-  [IssueStatus.INPROGRESS]: '#fff',
   [IssueStatus.SELECTED]: color.textDark,
+  [IssueStatus.INPROGRESS]: '#fff',
   [IssueStatus.DONE]: '#fff',
 };
 
 export const issueStatusBackgroundColors = {
   [IssueStatus.BACKLOG]: color.backgroundMedium,
-  [IssueStatus.INPROGRESS]: color.primary,
-  [IssueStatus.SELECTED]: color.backgroundMedium,
+  [IssueStatus.SELECTED]: color.backgroundLightPrimary,
+  [IssueStatus.INPROGRESS]: color.info,
   [IssueStatus.DONE]: color.success,
 };
 
@@ -145,7 +146,7 @@ export const mixin = {
       background: none;
     }
     &::-webkit-scrollbar-thumb {
-      border-radius: 99px;
+      // border-radius: 99px;
       background: ${background};
     }
   `,
@@ -172,7 +173,7 @@ export const mixin = {
     align-items: center;
     height: 24px;
     padding: 0 8px;
-    border-radius: 4px;
+    // border-radius: 4px;
     cursor: pointer;
     user-select: none;
     color: ${colorValue};

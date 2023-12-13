@@ -1,10 +1,10 @@
 import { ErrorRequestHandler } from 'express';
-import { pick } from 'lodash';
+import pick from 'lodash/pick';
 
 import { CustomError } from 'errors';
 
 export const handleError: ErrorRequestHandler = (error, _req, res, _next) => {
-  console.error(error);
+  console.error('error:', error);
 
   const isErrorSafeForClient = error instanceof CustomError;
 
