@@ -8,7 +8,7 @@ const seedUsers = (): Promise<User[]> => {
     createEntity(User, {
       email: 'ivan@komplexica.com',
       name: 'Ivan Vulović',
-      avatarUrl: 'https://i.ibb.co/6n0hLML/baby-yoda.jpg',
+      avatarUrl: 'https://res.cloudinary.com/komplexica/image/upload/fjgp2fmbvccquuhanthn.png',
     }),
   ];
   return Promise.all(users);

@@ -23,8 +23,8 @@ const AboutTooltip = tooltipProps => (
 
         <FeedbackParagraph>
           {'Read more on my website or reach out via '}
-          <a href="mailto:vulovix@gmail.com">
-            <strong>vulovix@gmail.com</strong>
+          <a href="mailto:ivan@komplexica.com">
+            <strong>ivan@komplexica.com</strong>
           </a>
         </FeedbackParagraph>
 
