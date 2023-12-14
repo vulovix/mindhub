@@ -6,12 +6,12 @@ import { createEntity } from 'utils/typeorm';
 const seedUsers = (): Promise<User[]> => {
   const users = [
     createEntity(User, {
-      email: 'gaben@jira.test',
+      email: 'gaben@workspace.test',
       name: 'Gaben',
       avatarUrl: 'https://i.ibb.co/6RJ5hq6/gaben.jpg',
     }),
     createEntity(User, {
-      email: 'yoda@jira.test',
+      email: 'yoda@workspace.test',
       name: 'Yoda',
       avatarUrl: 'https://i.ibb.co/6n0hLML/baby-yoda.jpg',
     }),

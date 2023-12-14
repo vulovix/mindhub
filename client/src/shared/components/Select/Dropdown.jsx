@@ -216,7 +216,7 @@ const SelectDropdown = ({
   );
 };
 
-const activeOptionClass = 'jira-select-option-is-active';
+const activeOptionClass = 'workspace-select-option-is-active';
 
 SelectDropdown.propTypes = propTypes;
 SelectDropdown.defaultProps = defaultProps;

@@ -39,8 +39,10 @@ const initializeExpress = (): void => {
   app.use((req, _res, next) => next(new RouteNotFoundError(req.originalUrl)));
   app.use(handleError);
 
-  app.listen(process.env.PORT || 3000, () => {
-    console.log('Server start', process.env.PORT || 3000);
+  const port = process.env.PORT || 10001;
+
+  app.listen(port, () => {
+    console.log('Server start', port);
   });
 };
 

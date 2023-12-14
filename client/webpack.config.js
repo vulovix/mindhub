@@ -47,6 +47,7 @@ module.exports = {
     static: path.join(__dirname, 'dev'),
     historyApiFallback: true,
     hot: true,
+    port: 10000,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

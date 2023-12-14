@@ -24,7 +24,7 @@ There are many showcase/example React projects out there but most of them are wa
 
 ## Setting up development environment 🛠
 
-- Install [postgreSQL](https://www.postgresql.org/) if you don't have it already and create a database named `jira_development`.
+- Install [postgreSQL](https://www.postgresql.org/) if you don't have it already and create a database named `workspace_development`.
 - `git clone https://github.com/vulovix/workspace.git`
 - Create an empty `.env` file in `/api`, copy `/api/.env.example` contents into it, and fill in your database username and password.
 - `npm run install-dependencies`
@@ -35,7 +35,7 @@ There are many showcase/example React projects out there but most of them are wa
 ## Running cypress end-to-end tests 🚥
 
 - Set up development environment
-- Create a database named `jira_test` and start the api with `cd api && npm run start:test`
+- Create a database named `workspace_test` and start the api with `cd api && npm run start:test`
 - `cd client && npm run test:cypress`
 
 ## What's missing?
