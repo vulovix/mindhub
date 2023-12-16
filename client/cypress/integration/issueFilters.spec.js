@@ -4,7 +4,7 @@ describe('Issue filters', () => {
   beforeEach(() => {
     cy.resetDatabase();
     cy.createTestAccount();
-    cy.visit('/project/board');
+    cy.visit('/workspace/board');
   });
 
   it('filters issues', () => {

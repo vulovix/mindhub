@@ -1,10 +1,11 @@
+/* eslint-disable cypress/unsafe-to-chain-command */
 import { testid } from '../support/utils';
 
 describe('Issue details', () => {
   beforeEach(() => {
     cy.resetDatabase();
     cy.createTestAccount();
-    cy.visit('/project/board');
+    cy.visit('/workspace/board');
     getListIssue().click(); // open issue details modal
   });
 

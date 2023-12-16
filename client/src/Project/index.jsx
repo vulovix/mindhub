@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect, useRouteMatch, useHistory } from 'react-router-dom';
 
 import useApi from 'shared/hooks/api';
+import ArtificialIntelligence from 'ArtificialIntelligence';
 import { updateArrayItemById } from 'shared/utils/javascript';
 import { createQueryParamModalHelpers } from 'shared/utils/queryParamModal';
 import { PageLoader, PageError, Modal } from 'shared/components';
@@ -85,6 +86,8 @@ const Project = () => {
           />
         )}
       />
+
+      <Route path={`${match.path}/ai`} render={() => <ArtificialIntelligence />} />
 
       <Route
         path={`${match.path}/settings`}

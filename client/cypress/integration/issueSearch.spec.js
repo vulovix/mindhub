@@ -4,7 +4,7 @@ describe('Issue search', () => {
   beforeEach(() => {
     cy.resetDatabase();
     cy.createTestAccount();
-    cy.visit('/project/board?modal-issue-search=true');
+    cy.visit('/workspace/board?modal-issue-search=true');
   });
 
   it('displays recent issues if search input is empty', () => {
@@ -46,5 +46,5 @@ describe('Issue search', () => {
   });
 
   const getIssueSearchModal = () => cy.get(testid`modal:issue-search`);
-  const getIssues = () => cy.get('a[href*="/project/board/issues/"]');
+  const getIssues = () => cy.get('a[href*="/workspace/board/issues/"]');
 });

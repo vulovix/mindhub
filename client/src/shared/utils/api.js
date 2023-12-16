@@ -5,7 +5,7 @@ import toast from 'shared/utils/toast';
 import { objectToQueryString } from 'shared/utils/url';
 import { getStoredAuthToken, removeStoredAuthToken } from 'shared/utils/authToken';
 
-const defaults = {
+export const defaults = {
   baseURL: process.env.API_URL || 'http://localhost:10001',
   headers: () => ({
     'Content-Type': 'application/json',

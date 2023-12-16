@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import { Project } from 'entities';
 import { catchErrors } from 'errors';
 import { findEntityOrThrow, updateEntity } from 'utils/typeorm';

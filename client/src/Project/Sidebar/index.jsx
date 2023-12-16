@@ -35,6 +35,7 @@ const ProjectSidebar = ({ project }) => {
       </ProjectInfo>
 
       {renderLinkItem(match, 'Board', 'board', '/board')}
+      {renderLinkItem(match, 'Wisdom', 'component', '/ai')}
       {renderLinkItem(match, 'Project Settings', 'settings', '/settings')}
       {/* 
       <Divider />

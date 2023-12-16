@@ -5,16 +5,22 @@ import * as projects from 'controllers/projects';
 import * as test from 'controllers/test';
 import * as users from 'controllers/users';
 
+import * as ai from 'controllers/openai';
+
 export const attachPublicRoutes = (app: any): void => {
   if (process.env.NODE_ENV === 'test') {
     app.delete('/test/reset-database', test.resetDatabase);
     app.post('/test/create-account', test.createAccount);
   }
 
+  app.get('/stream', ai.makeStream);
   app.post('/authentication/guest', authentication.createGuestAccount);
 };
 
 export const attachPrivateRoutes = (app: any): void => {
+  app.post('/prompt', ai.makePrompt);
+  app.post('/prompts', ai.makeStreamPrompt);
+
   app.post('/comments', comments.create);
   app.put('/comments/:commentId', comments.update);
   app.delete('/comments/:commentId', comments.remove);

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import { Issue } from 'entities';
 import { catchErrors } from 'errors';
 import { updateEntity, deleteEntity, createEntity, findEntityOrThrow } from 'utils/typeorm';
@@ -45,9 +44,15 @@ export const remove = catchErrors(async (req, res) => {
   res.respond({ issue });
 });
 
+// @ts-ignore
 const calculateListPosition = async ({ projectId, status }: Issue): Promise<number> => {
-  // const issues = await Issue.find({ id: projectId, status });
-  const issues = await Issue.find({ select: { id: projectId, status } });
+  const issues = await Issue.find({
+    select: {
+      projectId: true,
+      status: true,
+      listPosition: true,
+    },
+  });
 
   const listPositions = issues.map(({ listPosition }) => listPosition);
 

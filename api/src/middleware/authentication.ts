@@ -1,9 +1,7 @@
-// import { Request } from 'express';
 import { verifyToken } from 'utils/authToken';
 import { catchErrors, InvalidTokenError } from 'errors';
 import { User } from 'entities';
 
-// eslint-disable-next-line @typescript-eslint/no-misused-promises
 export const authenticateUser = catchErrors(async (req, _res, next) => {
   const token = getAuthTokenFromRequest(req);
   if (!token) {

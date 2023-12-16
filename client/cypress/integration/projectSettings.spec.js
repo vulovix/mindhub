@@ -4,7 +4,7 @@ describe('Project settings', () => {
   beforeEach(() => {
     cy.resetDatabase();
     cy.createTestAccount();
-    cy.visit('/project/settings');
+    cy.visit('/workspace/settings');
   });
 
   it('should display current values in form', () => {

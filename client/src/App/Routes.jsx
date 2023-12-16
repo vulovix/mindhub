@@ -9,9 +9,9 @@ import PageError from 'shared/components/PageError';
 const Routes = () => (
   <Router history={history}>
     <Switch>
-      <Redirect exact from="/" to="/project" />
+      <Redirect exact from="/" to="/workspace" />
       <Route path="/authenticate" component={Authenticate} />
-      <Route path="/project" component={Project} />
+      <Route path="/workspace" component={Project} />
       <Route component={PageError} />
     </Switch>
   </Router>

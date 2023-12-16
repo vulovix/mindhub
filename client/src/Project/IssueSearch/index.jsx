@@ -85,7 +85,7 @@ const ProjectIssueSearch = ({ project }) => {
 };
 
 const renderIssue = issue => (
-  <Link key={issue.id} to={`/project/board/issues/${issue.id}`}>
+  <Link key={issue.id} to={`/workspace/board/issues/${issue.id}`}>
     <Issue>
       <IssueTypeIcon type={issue.type} size={25} />
       <IssueData>

@@ -48,6 +48,12 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     port: 10000,
+    // proxy: {
+    //   '/stream': {
+    //     target: 'http://127.0.0.1:10001',
+    //     // pathRewrite: { '^/api': '' },
+    //   },
+    // },
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

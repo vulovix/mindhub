@@ -6,7 +6,7 @@ describe('Issues drag & drop', () => {
   beforeEach(() => {
     cy.resetDatabase();
     cy.createTestAccount();
-    cy.visit('/project/board');
+    cy.visit('/workspace/board');
   });
 
   it('moves issue between different lists', () => {
