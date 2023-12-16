@@ -10,7 +10,7 @@ import {
 
 import is from 'utils/validation';
 import { ProjectCategory } from 'constants/projects';
-import { Issue, User } from '.';
+import { Issue, Note, User } from '.';
 
 @Entity()
 class Project extends BaseEntity {
@@ -46,6 +46,12 @@ class Project extends BaseEntity {
     issue => issue.project,
   )
   issues: Issue[];
+
+  @OneToMany(
+    () => Note,
+    note => note.project,
+  )
+  notes: Note[];
 
   @OneToMany(
     () => User,

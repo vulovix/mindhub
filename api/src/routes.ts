@@ -4,6 +4,7 @@ import * as issues from 'controllers/issues';
 import * as projects from 'controllers/projects';
 import * as test from 'controllers/test';
 import * as users from 'controllers/users';
+import * as notes from 'controllers/notes';
 
 import * as ai from 'controllers/openai';
 
@@ -24,6 +25,12 @@ export const attachPrivateRoutes = (app: any): void => {
   app.post('/comments', comments.create);
   app.put('/comments/:commentId', comments.update);
   app.delete('/comments/:commentId', comments.remove);
+
+  app.get('/notes', notes.getProjectNotes);
+  app.get('/notes/:noteId', notes.getNote);
+  app.post('/notes', notes.create);
+  app.put('/notes/:noteId', notes.update);
+  app.delete('/notes/:noteId', notes.remove);
 
   app.get('/issues', issues.getProjectIssues);
   app.get('/issues/:issueId', issues.getIssueWithUsersAndComments);
