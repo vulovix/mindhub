@@ -12,8 +12,10 @@ import Sidebar from './Sidebar';
 import Board from './Board';
 import IssueSearch from './IssueSearch';
 import IssueCreate from './IssueCreate';
+import NoteCreate from './NoteCreate';
 import ProjectSettings from './ProjectSettings';
 import { ProjectPage } from './Styles';
+import Notes from './Notes';
 
 const Project = () => {
   const match = useRouteMatch();
@@ -21,6 +23,7 @@ const Project = () => {
 
   const issueSearchModalHelpers = createQueryParamModalHelpers('issue-search');
   const issueCreateModalHelpers = createQueryParamModalHelpers('issue-create');
+  const noteCreateModalHelpers = createQueryParamModalHelpers('note-create');
 
   const [{ data, error, setLocalData }, fetchProject] = useApi.get('/project');
 
@@ -38,11 +41,21 @@ const Project = () => {
     }));
   };
 
+  const updateLocalProjectNotes = (noteId, updatedFields) => {
+    setLocalData(currentData => ({
+      project: {
+        ...currentData.project,
+        notes: updateArrayItemById(currentData.project.notes, noteId, updatedFields),
+      },
+    }));
+  };
+
   return (
     <ProjectPage>
       <NavbarLeft
         issueSearchModalOpen={issueSearchModalHelpers.open}
         issueCreateModalOpen={issueCreateModalHelpers.open}
+        noteCreateModalOpen={noteCreateModalHelpers.open}
       />
 
       <Sidebar project={project} />
@@ -76,6 +89,24 @@ const Project = () => {
         />
       )}
 
+      {noteCreateModalHelpers.isOpen() && (
+        <Modal
+          isOpen
+          testid="modal:note-create"
+          width={800}
+          withCloseIcon={false}
+          onClose={noteCreateModalHelpers.close}
+          renderContent={modal => (
+            <NoteCreate
+              project={project}
+              fetchProject={fetchProject}
+              onCreate={() => history.push(`${match.url}/notes`)}
+              modalClose={modal.close}
+            />
+          )}
+        />
+      )}
+
       <Route
         path={`${match.path}/board`}
         render={() => (
@@ -83,6 +114,17 @@ const Project = () => {
             project={project}
             fetchProject={fetchProject}
             updateLocalProjectIssues={updateLocalProjectIssues}
+          />
+        )}
+      />
+
+      <Route
+        path={`${match.path}/notes`}
+        render={() => (
+          <Notes
+            project={project}
+            fetchProject={fetchProject}
+            updateLocalProjectNotes={updateLocalProjectNotes}
           />
         )}
       />
