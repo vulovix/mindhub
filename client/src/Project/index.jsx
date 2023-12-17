@@ -11,6 +11,7 @@ import NavbarLeft from './NavbarLeft';
 import Sidebar from './Sidebar';
 import Board from './Board';
 import IssueSearch from './IssueSearch';
+import NoteSearch from './NoteSearch';
 import IssueCreate from './IssueCreate';
 import NoteCreate from './NoteCreate';
 import ProjectSettings from './ProjectSettings';
@@ -22,6 +23,7 @@ const Project = () => {
   const history = useHistory();
 
   const issueSearchModalHelpers = createQueryParamModalHelpers('issue-search');
+  const noteSearchModalHelpers = createQueryParamModalHelpers('note-search');
   const issueCreateModalHelpers = createQueryParamModalHelpers('issue-create');
   const noteCreateModalHelpers = createQueryParamModalHelpers('note-create');
 
@@ -42,18 +44,22 @@ const Project = () => {
   };
 
   const updateLocalProjectNotes = (noteId, updatedFields) => {
-    setLocalData(currentData => ({
-      project: {
-        ...currentData.project,
-        notes: updateArrayItemById(currentData.project.notes, noteId, updatedFields),
-      },
-    }));
+    setLocalData(currentData => {
+      console.log(currentData, noteId, updatedFields);
+      return {
+        project: {
+          ...currentData.project,
+          notes: updateArrayItemById(currentData.project.notes, noteId, updatedFields),
+        },
+      };
+    });
   };
 
   return (
     <ProjectPage>
       <NavbarLeft
         issueSearchModalOpen={issueSearchModalHelpers.open}
+        noteSearchModalOpen={noteSearchModalHelpers.open}
         issueCreateModalOpen={issueCreateModalHelpers.open}
         noteCreateModalOpen={noteCreateModalHelpers.open}
       />
@@ -68,6 +74,17 @@ const Project = () => {
           width={600}
           onClose={issueSearchModalHelpers.close}
           renderContent={() => <IssueSearch project={project} />}
+        />
+      )}
+
+      {noteSearchModalHelpers.isOpen() && (
+        <Modal
+          isOpen
+          testid="modal:note-search"
+          variant="aside"
+          width={600}
+          onClose={noteSearchModalHelpers.close}
+          renderContent={() => <NoteSearch project={project} />}
         />
       )}
 

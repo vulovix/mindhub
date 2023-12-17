@@ -49,13 +49,15 @@ export const ProjectCategory = styled.div`
 export const Divider = styled.div`
   margin-top: 17px;
   padding-top: 18px;
-  border-top: 1px solid ${color.borderLight};
+  border-top: 1px solid ${color.borderInputFocus};
 `;
 
 export const LinkItem = styled.div`
   position: relative;
   display: flex;
-  padding: 8px 12px;
+  padding: 0 12px;
+  min-height: 42px;
+  align-items: center;
   // border-radius: 3px;
   ${mixin.clickable}
   ${props =>

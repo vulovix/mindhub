@@ -3,20 +3,28 @@ import PropTypes from 'prop-types';
 
 import { Icon, AboutTooltip } from 'shared/components';
 
-import { NavLeft, LogoLink, StyledLogo, Bottom, Item, ItemText } from './Styles';
+import { Divider, NavLeft, LogoLink, StyledLogo, Bottom, Item, ItemText } from './Styles';
 
 const propTypes = {
   issueSearchModalOpen: PropTypes.func.isRequired,
+  noteSearchModalOpen: PropTypes.func.isRequired,
   issueCreateModalOpen: PropTypes.func.isRequired,
   noteCreateModalOpen: PropTypes.func.isRequired,
 };
 
-const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen, noteCreateModalOpen }) => (
+const ProjectNavbarLeft = ({
+  noteSearchModalOpen,
+  issueSearchModalOpen,
+  issueCreateModalOpen,
+  noteCreateModalOpen,
+}) => (
   <NavLeft>
     <LogoLink to="/">
       <StyledLogo color="#fff" />
       <ItemText>Workspace</ItemText>
     </LogoLink>
+
+    <Divider />
 
     <Item onClick={issueSearchModalOpen}>
       <Icon type="search" size={22} left={3} />
@@ -28,10 +36,19 @@ const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen, noteCre
       <ItemText>Create Issue</ItemText>
     </Item>
 
+    <Divider />
+
+    <Item onClick={noteSearchModalOpen}>
+      <Icon type="search" size={22} left={3} />
+      <ItemText>Search notes</ItemText>
+    </Item>
+
     <Item onClick={noteCreateModalOpen}>
       <Icon type="plus" size={27} />
       <ItemText>Create Note</ItemText>
     </Item>
+
+    <Divider />
 
     <Bottom>
       <AboutTooltip

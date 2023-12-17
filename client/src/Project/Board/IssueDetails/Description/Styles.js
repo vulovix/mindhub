@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { color, font, mixin } from 'shared/utils/styles';
 
 export const Title = styled.div`
-  padding: 20px 0 6px;
+  padding: 20px 0 20px;
   ${font.size(15)}
   ${font.medium}
 `;
@@ -12,7 +12,7 @@ export const EmptyLabel = styled.div`
   margin-left: -7px;
   padding: 7px;
   // border-radius: 3px;
-  color: ${color.textMedium}
+  color: ${color.textMedium};
   transition: background 0.1s;
   ${font.size(15)}
   ${mixin.clickable}

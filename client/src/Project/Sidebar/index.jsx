@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 
 import { ProjectCategoryCopy } from 'shared/constants/projects';
-import { Icon /* , ProjectAvatar */ } from 'shared/components';
+/* import { Icon  , ProjectAvatar  } from 'shared/components'; */
 
 import {
   Sidebar,
@@ -39,12 +39,12 @@ const ProjectSidebar = ({ project }) => {
       {renderLinkItem(match, 'Wisdom', 'component', '/ai')}
       {renderLinkItem(match, 'Project Settings', 'settings', '/settings')}
       {/* 
-      <Divider />
-      {renderLinkItem(match, 'Releases', 'reports')}
-      {renderLinkItem(match, 'Issues and filters', 'issues')}
-      {renderLinkItem(match, 'Pages', 'page')}
-      {renderLinkItem(match, 'Reports', 'reports')}
-      {renderLinkItem(match, 'Components', 'component')} 
+        <Divider />
+        {renderLinkItem(match, 'Releases', 'reports')}
+        {renderLinkItem(match, 'Issues and filters', 'issues')}
+        {renderLinkItem(match, 'Pages', 'page')}
+        {renderLinkItem(match, 'Reports', 'reports')}
+        {renderLinkItem(match, 'Components', 'component')} 
       */}
     </Sidebar>
   );
@@ -59,7 +59,7 @@ const renderLinkItem = (match, text, iconType, path) => {
 
   return (
     <LinkItem {...linkItemProps}>
-      <Icon type={iconType} />
+      {/* <Icon type={iconType} /> */}
       <LinkText>{text}</LinkText>
       {!isImplemented && <NotImplemented>Not implemented</NotImplemented>}
     </LinkItem>

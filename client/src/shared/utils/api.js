@@ -49,7 +49,7 @@ const api = (method, url, variables) =>
 
 const optimisticUpdate = async (url, { updatedFields, currentFields, setLocalData }) => {
   try {
-    setLocalData(updatedFields);
+    setLocalData({ ...updatedFields, updatedAt: new Date().toISOString() });
     await api('put', url, updatedFields);
   } catch (error) {
     setLocalData(currentFields);

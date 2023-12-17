@@ -6,7 +6,6 @@ import { color, font, mixin } from 'shared/utils/styles';
 
 export const NoteLink = styled(Link)`
   display: block;
-  margin-bottom: 5px;
 `;
 
 export const Note = styled.div`
@@ -24,6 +23,7 @@ export const Note = styled.div`
 
 export const Title = styled.p`
   ${font.size(15)}
+  margin-bottom: 5px;
   @media (max-width: 1100px) {
     ${font.size(14.5)}
   }

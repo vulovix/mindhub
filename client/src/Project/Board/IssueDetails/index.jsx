@@ -16,7 +16,7 @@ import AssigneesReporter from './AssigneesReporter';
 import Priority from './Priority';
 import EstimateTracking from './EstimateTracking';
 import Dates from './Dates';
-import { TopActions, TopActionsRight, Content, Left, Right } from './Styles';
+import { TopActions, TopActionsRight, Content, Left, Right, SectionTitle } from './Styles';
 
 const propTypes = {
   issueId: PropTypes.string.isRequired,
@@ -82,6 +82,7 @@ const ProjectBoardIssueDetails = ({
           <AssigneesReporter issue={issue} updateIssue={updateIssue} projectUsers={projectUsers} />
           <Priority issue={issue} updateIssue={updateIssue} />
           <EstimateTracking issue={issue} updateIssue={updateIssue} />
+          <SectionTitle>Date</SectionTitle>
           <Dates issue={issue} />
         </Right>
       </Content>

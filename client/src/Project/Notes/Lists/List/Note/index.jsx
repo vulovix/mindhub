@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouteMatch } from 'react-router-dom';
+import Dates from 'Project/Notes/NoteDetails/Dates';
 import { NoteLink, Note, Title, Bottom } from './Styles';
 
 const propTypes = {
@@ -31,6 +32,7 @@ const ProjectListNote = ({ note }) => {
             ))}
           </Assignees>
         </Bottom> */}
+          <Dates note={note} />
         </Bottom>
       </Note>
     </NoteLink>

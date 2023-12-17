@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { color, font, mixin } from 'shared/utils/styles';
 import { InputDebounced, Spinner, Icon } from 'shared/components';
 
-export const IssueSearch = styled.div`
+export const NoteSearch = styled.div`
   padding: 25px 35px 60px;
-  display: grid;
 `;
 
 export const SearchInputCont = styled.div`
@@ -45,10 +44,9 @@ export const SearchSpinner = styled(Spinner)`
   right: 30px;
 `;
 
-export const Issue = styled.div`
+export const Note = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
   transition: background 0.1s;
   ${mixin.clickable}
   &:hover {
@@ -56,20 +54,12 @@ export const Issue = styled.div`
   }
 `;
 
-export const IssueData = styled.div`
-  padding-left: 10px;
-`;
+export const NoteData = styled.div``;
 
-export const IssueTitle = styled.div`
+export const NoteTitle = styled.div`
   color: ${color.textDark};
+  padding: 10px;
   ${font.size(15)}
-  margin-bottom: 6px;
-`;
-
-export const IssueTypeId = styled.div`
-  text-transform: uppercase;
-  color: ${color.textMedium};
-  ${font.size(12.5)}
 `;
 
 export const SectionTitle = styled.div`

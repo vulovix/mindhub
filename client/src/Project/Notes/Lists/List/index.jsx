@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
+import { sortByNewest } from 'shared/utils/javascript';
 import Note from './Note';
-import { List, Notes } from './Styles';
+import { List, NoNotes, Notes } from './Styles';
 
 const propTypes = {
   project: PropTypes.object.isRequired,
@@ -17,17 +18,23 @@ const defaultProps = {
 
 const ProjectNoteList = ({ project, filters, currentUserId }) => {
   const filteredNotes = filterNotes(project.notes, filters, currentUserId);
-  const filteredListNotes = filteredNotes;
+  const sortedListNotes = getSortedListNotes(filteredNotes);
   return (
     <List>
       <Notes data-testid="board-list-notes">
-        {filteredListNotes.map((note, index) => (
-          <Note key={note.id} projectUsers={project.users} note={note} index={index} />
-        ))}
+        {sortedListNotes.length ? (
+          sortedListNotes.map((note, index) => (
+            <Note key={note.id} projectUsers={project.users} note={note} index={index} />
+          ))
+        ) : (
+          <NoNotes>No notes yet.</NoNotes>
+        )}
       </Notes>
     </List>
   );
 };
+
+const getSortedListNotes = notes => sortByNewest(notes, 'updatedAt');
 
 const filterNotes = (projectNotes, filters) => {
   const { searchTerm, recent } = filters;

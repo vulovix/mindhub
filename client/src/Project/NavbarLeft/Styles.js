@@ -52,6 +52,12 @@ export const Bottom = styled.div`
   width: 100%;
 `;
 
+export const Divider = styled.div`
+  margin-top: 17px;
+  padding-top: 18px;
+  border-top: 1px solid #333;
+`;
+
 export const Item = styled.div`
   position: relative;
   width: 100%;

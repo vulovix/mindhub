@@ -10,10 +10,12 @@ const propTypes = {
 };
 
 const ProjectBoardNoteDetailsDates = ({ note }) => (
-  <Dates>
-    <div>Created at {formatDateTimeConversational(note.createdAt)}</div>
-    <div>Updated at {formatDateTimeConversational(note.updatedAt)}</div>
-  </Dates>
+  <React.Fragment>
+    <Dates>
+      <div>Updated {formatDateTimeConversational(note.updatedAt)} &middot;&nbsp;</div>
+      <div>Created {formatDateTimeConversational(note.createdAt)}</div>
+    </Dates>
+  </React.Fragment>
 );
 
 ProjectBoardNoteDetailsDates.propTypes = propTypes;

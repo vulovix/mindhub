@@ -9,7 +9,7 @@ export const getProjectNotes = catchErrors(async (req, res) => {
   let whereSQL = 'note.projectId = :projectId';
 
   if (searchTerm) {
-    whereSQL += 'AND (note.title ILIKE :searchTerm OR note.descriptionText ILIKE :searchTerm)';
+    whereSQL += ' AND (note.title ILIKE :searchTerm OR note.descriptionText ILIKE :searchTerm)';
   }
 
   const notes = await Note.createQueryBuilder('note')
@@ -38,6 +38,6 @@ export const update = catchErrors(async (req, res) => {
 });
 
 export const remove = catchErrors(async (req, res) => {
-  const issue = await deleteEntity(Note, req.params.noteId);
-  res.respond({ issue });
+  const note = await deleteEntity(Note, req.params.noteId);
+  res.respond({ note });
 });

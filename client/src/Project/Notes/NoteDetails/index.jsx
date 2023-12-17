@@ -9,7 +9,7 @@ import Loader from './Loader';
 import Delete from './Delete';
 import Title from './Title';
 import Description from './Description';
-import { TopActions, TopActionsRight, Content, Left, Right } from './Styles';
+import { TopActions, TopActionsRight, Content, Left, Right, SectionTitle } from './Styles';
 import Dates from './Dates';
 import AssigneesReporter from './AssigneesReporter';
 
@@ -65,6 +65,7 @@ const ProjectBoardNoteDetails = ({
         </Left>
         <Right>
           <AssigneesReporter note={note} updateNote={updateNote} projectUsers={projectUsers} />
+          <SectionTitle>Date</SectionTitle>
           <Dates note={note} />
         </Right>
       </Content>
