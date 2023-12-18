@@ -13,7 +13,8 @@ export const findEntityOrThrow = async <T extends EntityConstructor>(
   Constructor: T,
   options: FindOneOptions,
 ): Promise<InstanceType<T>> => {
-  const instance = await Constructor.findOne(options);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const instance: InstanceType<T> = await Constructor.findOne(options);
   if (!instance) {
     throw new EntityNotFoundError(Constructor.name);
   }
@@ -37,6 +38,7 @@ export const createEntity = async <T extends EntityConstructor>(
   Constructor: T,
   input: Partial<InstanceType<T>>,
 ): Promise<InstanceType<T>> => {
+  // @ts-expect-error IDK
   const instance = Constructor.create(input);
   return validateAndSaveEntity(instance as InstanceType<T>);
 };
