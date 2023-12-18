@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --exec ts-node --files src/index",
     "start:test": "cross-env NODE_ENV='test' DB_DATABASE='jira_test' npm start",
-    "start:production": "npx pm2 start --name 'jira_api' node -- -r ./tsconfig-paths.js build/index.js",
+    "_start:production": "npx pm2 start --name 'jira_api' node -- -r ./tsconfig-paths.js build/index.js",
+    "start:production": "node -r ./tsconfig-paths.js build/index.js",
     "build": "cd src && tsc",
     "pre-commit": "lint-staged"
   },
@@ -47,7 +48,7 @@
     "prettier": "^1.19.1",
     "ts-node": "^10.8.2",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.7.2"
+    "typescript": "^5.3.3"
   },
   "_moduleDirectories": [
     "src"
