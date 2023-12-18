@@ -42,7 +42,7 @@ const ProjectSettings = ({ project, fetchProject }) => {
       <FormCont>
         <FormElement>
           {/* <Breadcrumbs items={['Projects', project.name, 'Project Settings']} /> */}
-          <FormHeading>Project Settings</FormHeading>
+          <FormHeading>Settings</FormHeading>
 
           <Form.Field.Input name="name" label="Name" />
           <Form.Field.Input name="url" label="URL" />

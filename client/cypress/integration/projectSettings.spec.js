@@ -1,6 +1,6 @@
 import { testid } from '../support/utils';
 
-describe('Project settings', () => {
+describe('Workspace settings', () => {
   beforeEach(() => {
     cy.resetDatabase();
     cy.createTestAccount();

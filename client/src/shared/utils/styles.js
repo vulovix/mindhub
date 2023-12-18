@@ -59,7 +59,7 @@ export const issueStatusBackgroundColors = {
 
 export const sizes = {
   appNavBarLeftWidth: 64,
-  secondarySideBarWidth: 230,
+  secondarySideBarWidth: 200,
   minViewportWidth: 1000,
 };
 
