@@ -61,7 +61,7 @@ module.exports = {
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production',
-      API_URL: 'http://localhost:10001',
+      API_URL: '/api',
     }),
     new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
   ],
