@@ -42,16 +42,16 @@ const ProjectSettings = ({ project, fetchProject }) => {
       <FormCont>
         <FormElement>
           {/* <Breadcrumbs items={['Projects', project.name, 'Project Settings']} /> */}
-          <FormHeading>Settings</FormHeading>
+          <FormHeading>Preferences</FormHeading>
 
           <Form.Field.Input name="name" label="Name" />
           <Form.Field.Input name="url" label="URL" />
           <Form.Field.TextEditor
             name="description"
             label="Description"
-            tip="Describe the project in as much detail as you'd like."
+            tip="Describe the workspace in as much detail as you'd like."
           />
-          <Form.Field.Select name="category" label="Project Category" options={categoryOptions} />
+          <Form.Field.Select name="category" label="Workspace Category" options={categoryOptions} />
 
           <ActionButton type="submit" variant="primary" isWorking={isUpdating}>
             Save changes

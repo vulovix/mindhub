@@ -146,10 +146,10 @@ const Project = () => {
         )}
       />
 
-      <Route path={`${match.path}/ai`} render={() => <ArtificialIntelligence />} />
+      <Route path={`${match.path}/intelligence`} render={() => <ArtificialIntelligence />} />
 
       <Route
-        path={`${match.path}/settings`}
+        path={`${match.path}/preferences`}
         render={() => <ProjectSettings project={project} fetchProject={fetchProject} />}
       />
 

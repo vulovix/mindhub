@@ -18,10 +18,10 @@ const seedUsers = (): Promise<User[]> => {
 
 const seedProject = (users: User[]): Promise<Project> =>
   createEntity(Project, {
-    name: "John's Workspace",
+    name: 'Mindspace',
     url: 'https://www.komplexica.com/software/mindspace',
     description:
-      'Plan, track, and manage your agile and software development projects in MindSpace. Customize your workflow, collaborate, and release great software.',
+      'Plan, track, and manage your agile and software development projects in Mindspace. Customize your workflow, collaborate, and release great software.',
     category: ProjectCategory.SOFTWARE,
     users,
   });
