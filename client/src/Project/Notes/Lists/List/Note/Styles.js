@@ -9,12 +9,12 @@ export const NoteLink = styled(Link)`
 `;
 
 export const Note = styled.div`
-  padding: 10px;
+  padding: 10px 8px;
   background: #fff;
   transition: background 0.1s;
   ${mixin.clickable}
   @media (max-width: 1100px) {
-    padding: 10px 8px;
+    display: block;
   }
   &:hover {
     background: ${color.backgroundLight};
@@ -22,11 +22,8 @@ export const Note = styled.div`
 `;
 
 export const Title = styled.p`
-  ${font.size(15)}
+  ${font.size(14)}
   margin-bottom: 5px;
-  @media (max-width: 1100px) {
-    ${font.size(14.5)}
-  }
 `;
 
 export const Bottom = styled.div`

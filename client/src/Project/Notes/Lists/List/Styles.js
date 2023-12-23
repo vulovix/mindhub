@@ -8,6 +8,7 @@ export const List = styled.div`
   /* margin: 0 5px; */
   min-height: 400px;
   width: 100%;
+
   /* background: ${color.backgroundLightest}; */
 `;
 
@@ -36,6 +37,4 @@ export const Notes = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* gap: 5px; */
-  /* padding: 5px; */
 `;

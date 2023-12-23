@@ -59,11 +59,9 @@ module.exports = {
       template: path.join(__dirname, 'src/index.html'),
       favicon: path.join(__dirname, 'src/favicon.png'),
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-        // API_URL: JSON.stringify('https://jira-api.ivorreic.com'),
-      },
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'production',
+      API_URL: 'http://localhost:10001',
     }),
     new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
   ],

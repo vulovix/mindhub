@@ -21,7 +21,7 @@ const ProjectNavbarLeft = ({
   <NavLeft>
     <LogoLink to="/">
       <StyledLogo color="#fff" />
-      <ItemText>Workspace</ItemText>
+      <ItemText>Mindspace</ItemText>
     </LogoLink>
 
     <Divider />

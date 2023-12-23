@@ -7,6 +7,6 @@ export const Dates = styled.div`
   line-height: 22px;
   display: flex;
   border-top: 1px solid ${color.borderLightest};
-  color: ${color.textMedium};
-  ${font.size(13)}
+  color: ${color.textLight};
+  ${font.size(12)}
 `;

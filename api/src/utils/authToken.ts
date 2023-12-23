@@ -5,7 +5,7 @@ import { InvalidTokenError } from 'errors';
 
 export const signToken = (payload: object, options?: SignOptions): string =>
   jwt.sign(payload, process.env.JWT_SECRET, {
-    expiresIn: '360 days',
+    expiresIn: '365 days',
     ...options,
   });
 

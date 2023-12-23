@@ -31,10 +31,11 @@ export const Issue = styled.div`
 `;
 
 export const Title = styled.p`
-  padding-bottom: 11px;
-  ${font.size(15)}
+  padding-bottom: 10px;
+  ${font.size(14)}
+  ${font.normal}
   @media (max-width: 1100px) {
-    ${font.size(14.5)}
+    ${font.size(14)}
   }
 `;
 

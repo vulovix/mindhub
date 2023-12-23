@@ -1,4 +1,4 @@
-<h1 align="center">Workspace</h1>
+<h1 align="center">Mindspace</h1>
 
 <div align="center">React, Node, Auto formatted with Prettier, tested with Cypress 🎗</div>
 
@@ -24,8 +24,8 @@ There are many showcase/example React projects out there but most of them are wa
 
 ## Setting up development environment 🛠
 
-- Install [postgreSQL](https://www.postgresql.org/) if you don't have it already and create a database named `workspace_development`.
-- `git clone https://github.com/vulovix/workspace.git`
+- Install [postgreSQL](https://www.postgresql.org/) if you don't have it already and create a database named `mindspace_development`.
+- `git clone https://github.com/vulovix/mindspace.git`
 - Create an empty `.env` file in `/api`, copy `/api/.env.example` contents into it, and fill in your database username and password.
 - `npm run install-dependencies`
 - `cd api && npm start`
@@ -35,7 +35,7 @@ There are many showcase/example React projects out there but most of them are wa
 ## Running cypress end-to-end tests 🚥
 
 - Set up development environment
-- Create a database named `workspace_test` and start the api with `cd api && npm run start:test`
+- Create a database named `mindspace_test` and start the api with `cd api && npm run start:test`
 - `cd client && npm run test:cypress`
 
 ## What's missing?
@@ -56,7 +56,7 @@ Not all components have properly defined [aria attributes](https://developer.moz
 
 ### Unit/Integration tests 🧪
 
-Both Client and API are currently tested through [end-to-end Cypress tests](https://github.com/vulovix/workspace/tree/master/client/cypress/integration). That's good enough for a relatively simple application such as this, even if it was a real product. However, as the app grows in complexity, it might be wise to start writing additional unit/integration tests.
+Both Client and API are currently tested through [end-to-end Cypress tests](https://github.com/vulovix/mindspace/tree/master/client/cypress/integration). That's good enough for a relatively simple application such as this, even if it was a real product. However, as the app grows in complexity, it might be wise to start writing additional unit/integration tests.
 
 ## Contributing
 

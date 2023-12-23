@@ -4,11 +4,13 @@ import { ProjectCategory } from 'constants/projects';
 import { createEntity } from 'utils/typeorm';
 
 const seedUsers = (): Promise<User[]> => {
+  const d = Date.now();
   const users = [
     createEntity(User, {
-      email: 'ivan@komplexica.com',
-      name: 'Ivan Vulović',
-      avatarUrl: 'https://res.cloudinary.com/komplexica/image/upload/jg1xoy2so1bs0grqzl0q.png',
+      email: `mindspace-guest-${d}@komplexica.com`,
+      name: 'John Doe',
+      avatarUrl:
+        'https://res.cloudinary.com/komplexica/image/upload/v1703339300/logo512x512_vkkdzx.png',
     }),
   ];
   return Promise.all(users);
@@ -16,10 +18,10 @@ const seedUsers = (): Promise<User[]> => {
 
 const seedProject = (users: User[]): Promise<Project> =>
   createEntity(Project, {
-    name: 'Workspace',
-    url: 'https://www.komplexica.com/software/workspace',
+    name: "John's Workspace",
+    url: 'https://www.komplexica.com/software/mindspace',
     description:
-      'Plan, track, and manage your agile and software development projects in Workspace. Customize your workflow, collaborate, and release great software.',
+      'Plan, track, and manage your agile and software development projects in MindSpace. Customize your workflow, collaborate, and release great software.',
     category: ProjectCategory.SOFTWARE,
     users,
   });

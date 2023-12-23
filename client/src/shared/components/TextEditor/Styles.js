@@ -16,7 +16,7 @@ export const EditorCont = styled.div`
     border: 1px solid ${color.borderLightest};
     border-top: none;
     color: ${color.textDarkest};
-    ${font.size(15)}
+    ${font.size(14)}
     ${font.regular}
   }
   .ql-editor {

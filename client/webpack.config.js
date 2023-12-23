@@ -61,8 +61,10 @@ module.exports = {
       template: path.join(__dirname, 'src/index.html'),
       favicon: path.join(__dirname, 'src/favicon.png'),
     }),
-    new webpack.DefinePlugin({
-      'process.env': JSON.stringify(process.env),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+      API_URL: 'http://localhost:10001',
+      // 'process.env': JSON.stringify(process.env),
     }),
   ],
 };

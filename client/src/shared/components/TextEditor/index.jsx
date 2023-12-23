@@ -36,15 +36,63 @@ const TextEditor = ({
 }) => {
   const $editorContRef = useRef();
   const $editorRef = useRef();
+
   const initialValueRef = useRef(defaultValue || alsoDefaultValue || '');
+
+  const quillConfig = {
+    theme: 'snow',
+    modules: {
+      toolbar: {
+        container: [
+          ['bold', 'italic', 'underline', 'strike', 'code'],
+          [{ align: '' }, { align: 'center' }, { align: 'right' }, { align: 'justify' }],
+          [('blockquote', 'code-block')],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['link', 'image', 'video'],
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          [{ color: [] }, { background: [] }],
+          ['clean'],
+        ],
+      },
+    },
+  };
 
   useLayoutEffect(() => {
     let quill = new Quill($editorRef.current, { placeholder, ...quillConfig });
+    quill.clipboard.addMatcher(Node.TEXT_NODE, function(node, delta) {
+      const regex = /https?:\/\/[^\s]+/g;
+      if (typeof node.data !== 'string') return;
+      const matches = node.data.match(regex);
 
+      if (matches && matches.length > 0) {
+        const ops = [];
+        let str = node.data;
+
+        matches.forEach(match => {
+          const split = str.split(match);
+          if (match.match(/\.(png|jpg|jpeg|jpg|gif|svg|webp)$/) != null) {
+            const beforeLink = split.shift();
+            ops.push({ insert: beforeLink });
+            ops.push({ insert: { image: match }, attributes: { link: match } });
+
+            str = split.join(match);
+          } else {
+            const beforeLink = split.shift();
+            ops.push({ insert: beforeLink });
+            ops.push({ insert: match, attributes: { link: match } });
+            str = split.join(match);
+          }
+        });
+        ops.push({ insert: str });
+        delta.ops = ops;
+      }
+      return delta;
+    });
     const insertInitialValue = () => {
       quill.clipboard.dangerouslyPasteHTML(0, initialValueRef.current);
       quill.blur();
     };
+
     const handleContentsChange = () => {
       onChange(getHTMLValue());
     };
@@ -66,20 +114,6 @@ const TextEditor = ({
       <div ref={$editorRef} />
     </EditorCont>
   );
-};
-
-const quillConfig = {
-  theme: 'snow',
-  modules: {
-    toolbar: [
-      ['bold', 'italic', 'underline', 'strike'],
-      ['blockquote', 'code-block'],
-      [{ list: 'ordered' }, { list: 'bullet' }],
-      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-      [{ color: [] }, { background: [] }],
-      ['clean'],
-    ],
-  },
 };
 
 TextEditor.propTypes = propTypes;
