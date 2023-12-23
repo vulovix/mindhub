@@ -1,13 +1,15 @@
 {
-  "name": "jira_clone",
+  "name": "mindspace",
   "version": "1.0.0",
-  "author": "Ivor Reic",
+  "author": "Ivan Vulović",
   "license": "MIT",
   "scripts": {
     "pre-commit": "cd api && npm run pre-commit && cd ../client && npm run pre-commit",
     "install-dependencies": "npm install && cd api && npm install && cd ../client && npm install",
     "build": "cd api && npm run build && cd ../client && npm run build",
-    "start:production": "cd api && npm run start:production && cd ../client && npm run start:production"
+    "start:production": "cd api && npm run start:production && cd ../client && npm run start:production",
+    "start:dev-api": "cd api && npm run start",
+    "start:dev-client": "cd client && npm run start"
   },
   "devDependencies": {
     "husky": "^4.0.0-beta.5"

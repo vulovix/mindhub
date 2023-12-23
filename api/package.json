@@ -1,7 +1,7 @@
 {
-  "name": "jira_api",
+  "name": "mindspace-api",
   "version": "1.0.0",
-  "author": "Ivor Reic",
+  "author": "Ivan Vulović",
   "license": "MIT",
   "scripts": {
     "start": "nodemon --exec ts-node --files src/index",
