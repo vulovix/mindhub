@@ -8,8 +8,8 @@
     "install-dependencies": "npm install && cd api && npm install && cd ../client && npm install",
     "build": "cd api && npm run build && cd ../client && npm run build",
     "start:production": "cd api && npm run start:production && cd ../client && npm run start:production",
-    "start:dev-api": "cd api && npm run start",
-    "start:dev-client": "cd client && npm run start"
+    "start:api": "cd api && npm run start",
+    "start:client": "cd client && npm run start"
   },
   "devDependencies": {
     "husky": "^4.0.0-beta.5"

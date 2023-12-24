@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import * as authentication from 'controllers/authentication';
 import * as comments from 'controllers/comments';
 import * as issues from 'controllers/issues';
@@ -16,6 +18,7 @@ export const attachPublicRoutes = (app: any): void => {
 
   app.get('/stream', ai.makeStream);
   app.post('/authentication/guest', authentication.createGuestAccount);
+  app.post('/authentication/login', authentication.loginWithRecoveryCode);
 };
 
 export const attachPrivateRoutes = (app: any): void => {

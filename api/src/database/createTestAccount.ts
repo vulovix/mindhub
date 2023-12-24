@@ -2,17 +2,20 @@ import { Comment, Issue, Project, User } from 'entities';
 import { ProjectCategory } from 'constants/projects';
 import { IssueType, IssueStatus, IssuePriority } from 'constants/issues';
 import { createEntity } from 'utils/typeorm';
+import { generateID } from 'utils/generator';
 
 const seedUsers = (): Promise<User[]> => {
   const users = [
     createEntity(User, {
       email: 'gaben@workspace.test',
       name: 'Gaben',
+      recoveryCode: generateID(10),
       avatarUrl: 'https://i.ibb.co/6RJ5hq6/gaben.jpg',
     }),
     createEntity(User, {
       email: 'yoda@workspace.test',
       name: 'Yoda',
+      recoveryCode: generateID(10),
       avatarUrl: 'https://i.ibb.co/6n0hLML/baby-yoda.jpg',
     }),
   ];

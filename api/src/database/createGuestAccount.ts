@@ -2,6 +2,7 @@ import { /* Comment, Issue, */ Project, User } from 'entities';
 import { ProjectCategory } from 'constants/projects';
 // import { IssueType, IssueStatus, IssuePriority } from 'constants/issues';
 import { createEntity } from 'utils/typeorm';
+import { generateID } from 'utils/generator';
 
 const seedUsers = (): Promise<User[]> => {
   const d = Date.now();
@@ -9,6 +10,7 @@ const seedUsers = (): Promise<User[]> => {
     createEntity(User, {
       email: `mindspace-guest-${d}@komplexica.com`,
       name: 'John Doe',
+      recoveryCode: generateID(10),
       avatarUrl:
         'https://res.cloudinary.com/komplexica/image/upload/v1703339300/logo512x512_vkkdzx.png',
     }),
