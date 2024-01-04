@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 
 import { ProjectCategoryCopy } from 'shared/constants/projects';
-/* import { Icon  , ProjectAvatar  } from 'shared/components'; */
+import { Icon } from 'shared/components';
 
 import {
   Sidebar,
@@ -35,7 +35,7 @@ const ProjectSidebar = ({ project }) => {
       </ProjectInfo>
 
       {renderLinkItem(match, 'Board', 'board', '/board')}
-      {renderLinkItem(match, 'Notes', 'component', '/notes')}
+      {renderLinkItem(match, 'Notes', 'page', '/notes')}
       {renderLinkItem(match, 'Intelligence', 'component', '/intelligence')}
       {renderLinkItem(match, 'Preferences', 'settings', '/preferences')}
       {/* 
@@ -59,7 +59,7 @@ const renderLinkItem = (match, text, iconType, path) => {
 
   return (
     <LinkItem {...linkItemProps}>
-      {/* <Icon type={iconType} /> */}
+      <Icon type={iconType} top={2} />
       <LinkText>{text}</LinkText>
       {!isImplemented && <NotImplemented>Not implemented</NotImplemented>}
     </LinkItem>

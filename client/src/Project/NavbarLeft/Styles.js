@@ -92,3 +92,9 @@ export const ItemText = styled.div`
     opacity: 1;
   }
 `;
+
+export const PagesNav = styled.div`
+  @media (min-width: 999px) {
+    display: none;
+  }
+`;

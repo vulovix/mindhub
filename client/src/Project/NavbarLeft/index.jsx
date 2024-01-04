@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Icon, AboutTooltip } from 'shared/components';
 
-import { Divider, NavLeft, LogoLink, StyledLogo, Bottom, Item, ItemText } from './Styles';
+import { Divider, NavLeft, LogoLink, StyledLogo, Bottom, Item, ItemText, PagesNav } from './Styles';
 
 const propTypes = {
   issueSearchModalOpen: PropTypes.func.isRequired,
   noteSearchModalOpen: PropTypes.func.isRequired,
   issueCreateModalOpen: PropTypes.func.isRequired,
   noteCreateModalOpen: PropTypes.func.isRequired,
+  onNavigate: PropTypes.func.isRequired,
 };
 
 const ProjectNavbarLeft = ({
@@ -17,12 +18,36 @@ const ProjectNavbarLeft = ({
   issueSearchModalOpen,
   issueCreateModalOpen,
   noteCreateModalOpen,
+  onNavigate,
 }) => (
   <NavLeft>
     <LogoLink to="/">
       <StyledLogo color="#fff" />
       <ItemText>Mindspace</ItemText>
     </LogoLink>
+
+    <PagesNav>
+      <Divider />
+      <Item onClick={() => onNavigate('board')}>
+        <Icon type="board" size={24} />
+        <ItemText>Board</ItemText>
+      </Item>
+
+      <Item onClick={() => onNavigate('notes')}>
+        <Icon type="page" size={24} />
+        <ItemText>Notes</ItemText>
+      </Item>
+
+      <Item onClick={() => onNavigate('intelligence')}>
+        <Icon type="component" size={24} />
+        <ItemText>Intelligence</ItemText>
+      </Item>
+
+      <Item onClick={() => onNavigate('preferences')}>
+        <Icon type="settings" size={24} />
+        <ItemText>Preferences</ItemText>
+      </Item>
+    </PagesNav>
 
     <Divider />
 

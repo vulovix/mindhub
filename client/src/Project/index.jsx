@@ -34,6 +34,8 @@ const Project = () => {
 
   const { project } = data;
 
+  const handleNavigate = path => history.push(path);
+
   const updateLocalProjectIssues = (issueId, updatedFields) => {
     setLocalData(currentData => ({
       project: {
@@ -62,6 +64,7 @@ const Project = () => {
         noteSearchModalOpen={noteSearchModalHelpers.open}
         issueCreateModalOpen={issueCreateModalHelpers.open}
         noteCreateModalOpen={noteCreateModalHelpers.open}
+        onNavigate={handleNavigate}
       />
 
       <Sidebar project={project} />

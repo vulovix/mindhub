@@ -26,11 +26,12 @@ const ProjectBoardFilters = ({ defaultFilters, filters, mergeFilters }) => {
         isActive={recent}
         onClick={() => mergeFilters({ recent: !recent })}
       >
-        Recently Updated
+        Recently updated
       </StyledButton>
-
       {!areFiltersCleared && (
-        <ClearAll onClick={() => mergeFilters(defaultFilters)}>Clear Filters</ClearAll>
+        <ClearAll variant="empty" onClick={() => mergeFilters(defaultFilters)}>
+          Clear all
+        </ClearAll>
       )}
     </Filters>
   );
