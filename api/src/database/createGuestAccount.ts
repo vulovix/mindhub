@@ -8,7 +8,7 @@ const seedUsers = (): Promise<User[]> => {
   const d = Date.now();
   const users = [
     createEntity(User, {
-      email: `mindspace-guest-${d}@komplexica.com`,
+      email: `mindhub-guest-${d}@komplexica.com`,
       name: 'John Doe',
       recoveryCode: generateID(10),
       avatarUrl:
@@ -20,10 +20,10 @@ const seedUsers = (): Promise<User[]> => {
 
 const seedProject = (users: User[]): Promise<Project> =>
   createEntity(Project, {
-    name: 'Mindspace',
-    url: 'https://www.komplexica.com/software/mindspace',
+    name: 'Mindhub',
+    url: 'https://www.komplexica.com/software/mindhub',
     description:
-      'Plan, track, and manage your agile and software development projects in Mindspace. Customize your workflow, collaborate, and release great software.',
+      'Plan, track, and manage your agile and software development projects in MindHub. Customize your workflow, collaborate, and release great software.',
     category: ProjectCategory.SOFTWARE,
     users,
   });
