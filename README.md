@@ -8,7 +8,7 @@
 
 ![App screenshot](https://res.cloudinary.com/komplexica/image/upload/tujyeqja7p9smt2qllhm.png)
 
-![App screenshot](https://res.cloudinary.com/komplexica/image/upload/bgujm9njoczx3ix3t2lv.png)
+![App screenshot](https://res.cloudinary.com/komplexica/image/upload/o4gyezjflci0zshpfcc1.png)
 
 ![App screenshot](https://res.cloudinary.com/komplexica/image/upload/g3wjrt4xbkzss5cdz3ka.png)
 
